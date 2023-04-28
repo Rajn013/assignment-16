@@ -1,0 +1,122 @@
+1. Create a list called years_list, starting with the year of your birth, and each year thereafter until the year of your fifth birthday. For example, if you were born in 1980. the list would be years_list = [1980, 1981, 1982, 1983, 1984, 1985].
+
+ans years_list = [1995, 1996, 1997, 1998, 1999, 2000]
+     I have used the year 1995 as an example, you should replace it with the year of your birth, and the subsequent years until your fifth birthday.
+
+2.In which year in years_list was your third birthday? Remember, you were 0 years of age for your first year.
+ans Based on the years_list generated earlier, if your birth year is 1995, then your third birthday would be in the year 1998.
+
+3.In the years list, which year were you the oldest?
+ans Based on the years_list generated earlier, if your birth year is 1995, then the year in which you were the oldest would be 2000.
+
+4. Make a list called things with these three strings as elements: "mozzarella", "cinderella", "salmonella".
+
+ans things = ["mozzarella", "cinderella", "salmonella"]
+
+5. Capitalize the element in things that refers to a person and then print the list. Did it change the element in the list?
+
+ans things = ["mozzarella", "cinderella", "salmonella"]
+    things[1] = things[1].capitalize()
+    print(things)
+
+    Output:
+
+
+    ['mozzarella', 'Cinderella', 'salmonella']
+
+ As we can see from the output, the element "cinderella" has been capitalized to "Cinderella". This shows that we can modify individual elements of a list in Python, and that the capitalize() method does not modify the list itself, but rather returns a modified string.
+
+6. Make a surprise list with the elements "Groucho," "Chico," and "Harpo."
+
+ans surprise = ["Groucho", "Chico", "Harpo"]
+
+7. Lowercase the last element of the surprise list, reverse it, and then capitalize it.
+
+ans surprise = ["Groucho", "Chico", "Harpo"]
+    surprise[-1] = surprise[-1].lower()[::-1].capitalize()
+    print(surprise)
+
+    output:
+     ['Groucho', 'Chico', 'Oprah']
+    In the above code, we first accessed the last element of the surprise list using -1 index, then applied the lower() method to convert the element to lowercase, followed by the [::-1] slice operation to reverse the string, and finally applied the capitalize() method to capitalize the first letter of the reversed string.
+
+Note that this operation does not modify the original surprise list, but rather creates a new string and assigns it to the last element of the list.
+
+
+8. Make an English-to-French dictionary called e2f and print it. Here are your starter words: dog is chien, cat is chat, and walrus is morse.
+
+ans e2f = {'dog': 'chien', 'cat': 'chat', 'walrus': 'morse'}
+    print(e2f)
+
+   output:
+   {'dog': 'chien', 'cat': 'chat', 'walrus': 'morse'}
+9.Write the French word for walrus in your three-word dictionary e2f.
+
+ans.e2f dictionary:
+
+    walrus - morse (Note: "morse" is the French word for walrus)
+10.Make a French-to-English dictionary called f2e from e2f. Use the items method.
+
+ans  # French-to-English Dictionary (f2e) from e2f
+     e2f = {'morse': 'walrus', 'chat': 'cat', 'chien': 'dog', 'oiseau': 'bird', 'cheval': 'horse'}
+     f2e = {french: english for english, french in e2f.items()}
+     print(f2e)
+
+     output:
+     {'walrus': 'morse', 'cat': 'chat', 'dog': 'chien', 'bird': 'oiseau', 'horse': 'cheval'}
+
+
+11. Print the English version of the French word chien using f2e.
+
+ans     Print the English version of "chien" using f2e
+      french_word = 'chien'
+      english_word = f2e[french_word]
+      print(english_word)
+
+ output:
+ dog
+
+ 12. Make and print a set of English words from the keys in e2f.
+
+ans 
+      english_words = set(e2f.keys())
+      print(english_words)
+
+
+   output:
+   {'walrus', 'cat', 'dog', 'bird', 'horse'}
+
+13. Make a multilevel dictionary called life. Use these strings for the topmost keys: 'animals', 'plants', and 'other'. Make the 'animals' key refer to another dictionary with the keys 'cats', 'octopi', and 'emus'. Make the 'cats' key refer to a list of strings with the values 'Henri', 'Grumpy', and 'Lucy'. Make all the other keys refer to empty dictionaries.
+
+ans.  Print the life dictionary
+       print(life)
+    
+      output:
+      {'animals': {'cats': ['Henri', 'Grumpy', 'Lucy'], 'octopi': {}, 'emus': {}}, 'plants': {}, 'other': {}}
+
+14.. Print the top-level keys of life.
+
+ans # Print the top-level keys of the life dictionary
+      print(life.keys())
+   
+     output:
+     dict_keys(['animals', 'plants', 'other'])
+
+15. Print the keys for life['animals'].
+
+ans   Print the keys for life['animals']
+      print(life['animals'].keys())
+
+     output:
+     dict_keys(['cats', 'octopi', 'emus'])
+
+16. Print the values for life['animals']['cats']
+
+ans . Print the values for life['animals']['cats']
+       print(life['animals']['cats'])
+    
+      output:
+      ['Henri', 'Grumpy', 'Lucy']
+
+
+
